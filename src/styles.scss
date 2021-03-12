@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+:root
+{
+    //fox component color palette
+    --primary_f: #FFA502;
+    --secondary_f: #2F2F2F;
+    --accent_f1: #F5F5F5;
+    --accent_f2: #FDFFFC;
+    --button_idle_f: #17AEAE;
+    --button_active_f:#00A6A6;
+}
+
+body
+{
+    font-family: Poiret One;
+    background: var(--accent_f1);
+    font-size: large;
+    margin:0;
+}

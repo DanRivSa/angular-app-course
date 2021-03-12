@@ -1,0 +1,16 @@
+.navigation
+{
+    background: var(--accent_f2);
+    .brand
+    {
+        .color
+        {
+            color: var(--primary_f);
+        }
+    }
+
+    .active
+    {
+        color: var(--primary_f);
+    }
+}
