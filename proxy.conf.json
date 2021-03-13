@@ -1,0 +1,10 @@
+{
+    
+    "/floof/*":
+    {
+      "target":"https://randomfox.ca",
+      "secure":true,
+      "changeOrigin":true
+    }
+
+  }

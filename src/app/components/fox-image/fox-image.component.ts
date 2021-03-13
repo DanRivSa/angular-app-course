@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FoxService} from '../../services/fox.service';
+import {ResponseData} from '../../models/ResponseData';
 
 @Component({
   selector: 'app-fox-image',
@@ -8,14 +9,22 @@ import {FoxService} from '../../services/fox.service';
 })
 export class FoxImageComponent implements OnInit {
 
+  public animal:string = "fox";
+  public foxImg_url:string;
+
   constructor(private service:FoxService) { }
 
   ngOnInit(): void 
   {
+    this.GetRandomFoxImage();
+  }
+  
+  public GetRandomFoxImage()
+  {
     this.service.GetRandomFoxImage().subscribe(res=>
       {
-        console.log(res);
+        let obj:ResponseData = res as ResponseData;
+        this.foxImg_url = obj.image;
       });
   }
-
 }

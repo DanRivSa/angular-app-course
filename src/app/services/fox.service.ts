@@ -7,7 +7,6 @@ import {HttpClient} from '@angular/common/http';
 export class FoxService 
 {
 
-  private base_url = "https://randomfox.ca "
   constructor(private client:HttpClient) 
   { }
 
@@ -15,6 +14,6 @@ export class FoxService
 
   public GetRandomFoxImage()
   {
-    return this.client.get(`${this.base_url}/floof`);
+    return this.client.get(`/floof`);
   }
 }

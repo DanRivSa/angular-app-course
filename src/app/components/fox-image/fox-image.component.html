@@ -1,23 +1,50 @@
 <!--hay que pegar el elemento navbar al principio del archivo html del componente -->
 <!--------------------------------navbar--------------------------------------------->
-<nav class="navbar navbar-expand-lg navbar-light bg-light navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light app-nav">
     <div class="container-fluid">
-      <h2 class="brand">
-          Pica<span class="color">Fun</span>
-        </h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand brand" href="#">Pica<span class="color">Fun</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" >Foxes</a>
-          <a class="nav-link" href="#">Owls</a>
-          <a class="nav-link" href="#">Pandas</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto links">
+          <li class="nav-item link">
+            <a class="nav-link  active" aria-current="page" href="#">Foxes</a>
+          </li>
+          <li class="nav-item link">
+            <a class="nav-link " href="#">Owls</a>
+          </li>
+          <li class="nav-item link">
+            <a class="nav-link" href="#">Pandas</a>
+          </li>
+          <li>
+              <button class="btn giphy-btn">Try a gif!</button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
   <!-------------------------------- Resto de la intefaz----------------------------------------->
 
 
-  <p>fox-image works!</p>
+ <section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 class="subheading">Have Some Fun !</h5>
+                <h3 class="heading">Get random and cute <span class="color">{{animal}}</span> pics.</h3>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <section class="display-section">
+     <div class="container">
+        <button class="btn display-btn" (click)="GetRandomFoxImage()">
+            Click Me !
+        </button>
+        <div class="container img-container">
+            <img src="{{foxImg_url}}" class="img-fluid fox-img" alt="Cute foz pic"/>
+        </div>
+     </div>
+ </section>
