@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h5 class="subheading">Have Some Fun !</h5>
-                <h3 class="heading">Get random and cute <span class="color">{{animal}}</span> pics.</h3>
+                <h3 class="heading">Get random and cute <span class="color"> {{animal}}</span> pics with funny facts.</h3>
             </div>
         </div>
     </div>
@@ -40,11 +40,16 @@
 
  <section class="display-section">
      <div class="container">
-        <button class="btn display-btn" (click)="GetRandomFoxImage()">
+        <button class="btn display-btn" (click)="GetRandomFoxImageAndFact()">
             Click Me !
         </button>
         <div class="container img-container">
             <img src="{{foxImg_url}}" class="img-fluid fox-img" alt="Cute foz pic"/>
+        </div>
+        <div class="container fact-container">
+          <p class="message">
+            {{fact}}
+          </p>
         </div>
      </div>
  </section>

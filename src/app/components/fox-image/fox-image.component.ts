@@ -11,20 +11,28 @@ export class FoxImageComponent implements OnInit {
 
   public animal:string = "fox";
   public foxImg_url:string;
+  public fact:string;
 
   constructor(private service:FoxService) { }
 
   ngOnInit(): void 
   {
-    this.GetRandomFoxImage();
+    this.GetRandomFoxImageAndFact();
   }
   
-  public GetRandomFoxImage()
+  public GetRandomFoxImageAndFact()
   {
+    //fox image
     this.service.GetRandomFoxImage().subscribe(res=>
       {
         let obj:ResponseData = res as ResponseData;
         this.foxImg_url = obj.image;
+      });
+    //fox fact  
+    this.service.GetFoxFact().subscribe(res=>
+      {
+        let obj:ResponseData = res as ResponseData;
+        this.fact = obj.fact;
       });
   }
 }

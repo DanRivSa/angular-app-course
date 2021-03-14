@@ -5,6 +5,13 @@
       "target":"https://randomfox.ca",
       "secure":true,
       "changeOrigin":true
+    },
+
+    "/facts/*":
+    {
+      "target":"https://some-random-api.ml",
+      "secure":true,
+      "changeOrigin":true
     }
 
   }
