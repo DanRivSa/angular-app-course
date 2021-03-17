@@ -30,9 +30,9 @@ export class FoxImageComponent implements OnInit {
       });
     //fox fact  
     this.service.GetFoxFact().subscribe(res=>
-      {
+    {
         let obj:ResponseData = res as ResponseData;
         this.fact = obj.fact;
-      });
+    });
   }
 }

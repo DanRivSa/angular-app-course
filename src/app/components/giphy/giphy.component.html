@@ -1,5 +1,4 @@
-<!--hay que pegar el elemento navbar al principio del archivo html del componente -->
-<!--------------------------------navbar--------------------------------------------->
+<!----------------------------------------------------navigation------------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container-fluid app-nav">
       <a class="navbar-brand brand" href="#">Pica<span class="color">Fun</span></a>
@@ -24,38 +23,4 @@
       </div>
     </div>
   </nav>
-  <!-------------------------------- Resto de la intefaz----------------------------------------->
-
-
- <section class="hero-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h5 class="subheading">Have Some Fun !</h5>
-                <h3 class="heading">Get random and cute <span class="color"> {{animal}}</span> pics with funny facts.</h3>
-            </div>
-        </div>
-    </div>
- </section>
-
- <section class="display-section">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-6 left-col">
-            <button class="btn display-btn" (click)="GetRandomFoxImageAndFact()">
-              Click Me !
-            </button>
-            <div class="container img-container">
-              <img src="{{foxImg_url}}" class="img-fluid fox-img" alt="Cute foz pic"/>
-            </div>
-         </div>
-         <div class="col-lg-6 right-col">
-          <div class="container fact-container">
-            <p class="message">
-              {{fact}}
-            </p>
-          </div>
-         </div>
-       </div>
-     </div>
- </section>
+<!------------------------------------------------------------------------------------------------------------------------------------------->

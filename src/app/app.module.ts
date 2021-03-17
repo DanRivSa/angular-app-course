@@ -4,6 +4,8 @@ import {FoxModule} from './modules/fox/fox.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
+import { GiphyModule } from './modules/giphy/giphy.module';
+import { Secrets } from 'src/secrets';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,10 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FoxModule,
-    HttpClientModule
+    HttpClientModule,
+    GiphyModule
   ],
-  providers: [],
+  providers: [Secrets],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
