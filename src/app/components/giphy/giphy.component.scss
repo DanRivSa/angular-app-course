@@ -1,76 +1,134 @@
 //agregar para aplicar colores al nav-bar segun el estilo del componente
-.app-nav
+.navbar
 {
-    //color: var(--secondary_g);
-    background: var(--accent_f2);
-    .brand
+    padding-bottom: 0;
+    .app-nav
     {
-        font-size: 2em;
-        font-weight: 1200;
-        padding-left: 1.2em;
-        .color
+        //color: var(--secondary_g);
+        background: var(--accent_f2);
+        .brand
         {
-            color: var(--primary_g);;
-        }
-    }
-
-    .links
-    {
-        font-size: 1.2em;
-        padding: 1em 1.3em;
-
-        .active
-        {
-            color:var(--primary_g);
+            font-size: 2em;
+            font-weight: 1200;
+            padding-left: 1.2em;
+            .color
+            {
+                color: var(--primary_g);;
+            }
         }
 
-        .nav-link
+        .links
         {
+            font-size: 1.2em;
+            padding: 1em 1.3em;
+
+            .active
+            {
+                color:var(--primary_g);
+            }
+
+            .nav-link
+            {
+                transition: all 0.3s ease 0s;
+            }
+
+            .nav-link:hover
+            {
+                color:var(--primary_g);
+                transform: translateY(-3px);
+                box-shadow: 0px 4px 6px rgba(243, 104, 224, 0.3);
+            }
+
+            .link
+            {
+                padding-right: 1.5em;
+            }
+
+        }
+
+        .giphy-btn
+        {
+            color: var(--primary_g);
+            -webkit-text-stroke: var(--primary_g) 1px;
+            text-align:center;
+            background:white;
+            font-size: 1em;
+            padding: .5em 20px;
+            border-radius: 50px;
+            width: 125px;
+            box-shadow: 0px 4px 6px rgba(243, 104, 224, 0.3);
             transition: all 0.3s ease 0s;
         }
 
-        .nav-link:hover
+        .giphy-btn:hover
         {
-            color:var(--primary_g);
+            color: var(--primary_g);
+            -webkit-text-stroke: var(--primary_g) 1px;
+            background:white;
+            box-shadow: 0px 6px 8px rgba(243, 104, 224, 0.3);
             transform: translateY(-3px);
-            box-shadow: 0px 4px 6px rgba(243, 104, 224, 0.3);
         }
 
-        .link
+        .giphy-btn:active
         {
-            padding-right: 1.5em;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(4px);
         }
 
     }
-
-    .giphy-btn
-    {
-        color: var(--primary_g);
-        -webkit-text-stroke: var(--primary_g) 1px;
-        text-align:center;
-        background:white;
-        font-size: 1em;
-        padding: .5em 20px;
-        border-radius: 50px;
-        width: 125px;
-        box-shadow: 0px 4px 6px rgba(243, 104, 224, 0.3);
-        transition: all 0.3s ease 0s;
-    }
-
-    .giphy-btn:hover
-    {
-        color: var(--primary_g);
-        -webkit-text-stroke: var(--primary_g) 1px;
-        background:white;
-        box-shadow: 0px 6px 8px rgba(243, 104, 224, 0.3);
-        transform: translateY(-3px);
-    }
-
-    .giphy-btn:active
-    {
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-        transform: translateY(4px);
-    }
-
 }
 //-------------------------------------------------------------------------
+.hero
+{
+    background: var(--primary_g);
+    color:white;
+    height: 300px;
+    .search-side
+    {
+        padding: 2.3em 10px;
+        .headers
+        {
+            text-align:center;
+            padding-bottom: 10px;
+        }
+
+        .searchbar
+        {
+            padding-top: 1.3em;
+            .input-group
+            {
+                .search-btn
+                {
+                    background:white;
+                    color:var(--primary_g);
+                    transition: all 0.3s ease 0s;
+                    box-shadow: 0px 3px 5px rgba($color: var(--button_idle_g), $alpha: 0.3);
+                }
+
+                .search-btn:hover
+                {
+                    box-shadow: 0px 5px 8px rgba($color: var(--button_active_g), $alpha: 0.6);
+                    transform: translateY(-4px);
+                }
+
+                .search-btn:active
+                {
+                    box-shadow: 0px 3px 5px rgba($color: var(--button_idle_g), $alpha: 0.3);
+                    transform: translateY(-1px);
+                }
+            }
+
+        }
+    }
+
+    .display-side
+    {
+        padding: 2em 10px;
+        .container
+        {
+            border-radius: 20px;
+            border: 25px solid var(--button_idle_g) ;
+            padding: 0;
+        }
+    }
+}

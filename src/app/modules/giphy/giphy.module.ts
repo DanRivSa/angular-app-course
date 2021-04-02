@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {GiphyService} from '../../services/giphy.service';
 import {GiphyComponent} from '../../components/giphy/giphy.component';
 import {AppRoutingModule} from '../../app-routing.module';
+import {FormsModule} from '@angular/forms';
 
 const components = [GiphyComponent];
 
@@ -11,7 +12,8 @@ const components = [GiphyComponent];
   declarations: [components],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [GiphyService],
   exports:[components]

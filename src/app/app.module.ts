@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GiphyModule } from './modules/giphy/giphy.module';
 import { Secrets } from 'src/secrets';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Secrets } from 'src/secrets';
     AppRoutingModule,
     FoxModule,
     HttpClientModule,
-    GiphyModule
+    GiphyModule,
+    FormsModule
   ],
   providers: [Secrets],
   bootstrap: [AppComponent]

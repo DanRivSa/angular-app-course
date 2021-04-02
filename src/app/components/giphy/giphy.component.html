@@ -22,5 +22,35 @@
         </ul>
       </div>
     </div>
-  </nav>
+</nav>
 <!------------------------------------------------------------------------------------------------------------------------------------------->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 search-side">
+        <div class="container headers">
+          <h3 class="h3 subheading">
+            Here, have some Gifs!
+          </h3>
+          <h1 class="h1 heading">
+            Ultimate fun for you
+          </h1>
+        </div>
+          <div class="container searchbar">
+            <div class="input-group">
+              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" name='tag' #tag="ngModel" [(ngModel)] = 'tag_input' />
+              <button type="button" class="btn search-btn" (click)="GetRandomGif(tag_input)">search</button>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-6 display-side">
+        <div class="container">
+          <img class="img-fluid" src="{{gif_url}}" alt="gif image"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+
+</div>
