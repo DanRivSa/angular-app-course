@@ -7,7 +7,8 @@ import {ResponseData} from '../../models/ResponseData';
   templateUrl: './giphy.component.html',
   styleUrls: ['./giphy.component.scss']
 })
-export class GiphyComponent implements OnInit {
+export class GiphyComponent implements OnInit 
+{
 
   public title:string;
   public gif_url:string;
@@ -15,36 +16,44 @@ export class GiphyComponent implements OnInit {
   public embed_url:string;
   public tag_input:string = '';
 
-  constructor(private service:GiphyService) { }
+  constructor(private service:GiphyService){}
 
   ngOnInit(): void 
   {
     this.GetRandomGif(this.tag_input);
+    
   }
 
   public GetRandomGif(tag?:string) //tags are only used to filter the response
   {
-    if(tag)
-      this.service.GetRandomGif(tag).subscribe(res=>
-        {
-          let giphy_res:ResponseData = res as ResponseData;
-          let data:ResponseData = giphy_res.data;
-          let image:ResponseData = data.images;
-          let gif_info:ResponseData = image.downsized_large;
-          this.gif_url = gif_info.url;
-          this.title = data.title;
-          this.gif_source = data.url;
-        });
-    else
-      this.service.GetRandomGif().subscribe(res=>
-        {
-          let giphy_res:ResponseData = res as ResponseData;
-          let data:ResponseData = giphy_res.data;
-          let image:ResponseData = data.images;
-          let gif_info:ResponseData = image.downsized_large;
-          this.gif_url = gif_info.url;
-          this.title = data.title;
-          this.gif_source = data.source;
-        });
+    
+      if(tag)
+      {
+        this.service.GetRandomGif(tag).subscribe(res=>
+          {
+            let giphy_res:ResponseData = res as ResponseData;
+            let data:ResponseData = giphy_res.data;
+            let image:ResponseData = data.images;
+            let gif_info:ResponseData = image.downsized_large;
+            this.gif_url = gif_info.url;
+            this.title = data.title;
+            this.gif_source = data.url;
+          });
+      }    
+      else
+      {
+        this.service.GetRandomGif().subscribe(res=>
+          {
+            let giphy_res:ResponseData = res as ResponseData;
+            let data:ResponseData = giphy_res.data;
+            let image:ResponseData = data.images;
+            let gif_info:ResponseData = image.downsized_large;
+            this.gif_url = gif_info.url;
+            this.title = data.title;
+            this.gif_source = data.source;
+          });
+
+      }
   }
+
 }

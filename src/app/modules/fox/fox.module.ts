@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {FoxService} from '../../services/fox.service';
 import {FoxImageComponent} from '../../components/fox-image/fox-image.component';
 import { AppRoutingModule } from '../../app-routing.module';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 
 const components = [FoxImageComponent];
@@ -12,7 +13,8 @@ const components = [FoxImageComponent];
   declarations: [components],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxSpinnerModule
   ],
   providers:[FoxService]
   ,

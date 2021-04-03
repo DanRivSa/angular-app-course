@@ -4,6 +4,7 @@ import {GiphyService} from '../../services/giphy.service';
 import {GiphyComponent} from '../../components/giphy/giphy.component';
 import {AppRoutingModule} from '../../app-routing.module';
 import {FormsModule} from '@angular/forms';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 const components = [GiphyComponent];
 
@@ -13,7 +14,8 @@ const components = [GiphyComponent];
   imports: [
     CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [GiphyService],
   exports:[components]

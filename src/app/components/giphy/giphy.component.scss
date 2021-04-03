@@ -126,9 +126,15 @@
         padding: 2em 10px;
         .container
         {
-            border-radius: 20px;
-            border: 25px solid var(--button_idle_g) ;
             padding: 0;
+            margin: 10 auto;
+            text-align: center;
+            
+            .gif-img
+            {
+                border-radius: 20px;
+                border: 25px solid var(--button_idle_g) ;
+            }
         }
     }
 }

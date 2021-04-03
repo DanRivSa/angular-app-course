@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FoxModule} from './modules/fox/fox.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { GiphyModule } from './modules/giphy/giphy.module';
 import { Secrets } from 'src/secrets';
 import {FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {INTERCEPTORS} from './interceptors/Interceptors';
+//libraries
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -18,9 +22,12 @@ import {FormsModule} from '@angular/forms';
     FoxModule,
     HttpClientModule,
     GiphyModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
   ],
-  providers: [Secrets],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  providers: [Secrets,INTERCEPTORS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

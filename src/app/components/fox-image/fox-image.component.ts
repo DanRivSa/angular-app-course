@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FoxService} from '../../services/fox.service';
 import {ResponseData} from '../../models/ResponseData';
 
+
 @Component({
   selector: 'app-fox-image',
   templateUrl: './fox-image.component.html',
@@ -13,7 +14,9 @@ export class FoxImageComponent implements OnInit {
   public foxImg_url:string;
   public fact:string;
 
-  constructor(private service:FoxService) { }
+  constructor(private service:FoxService)
+  {
+  }
 
   ngOnInit(): void 
   {
